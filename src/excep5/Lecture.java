@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Lecture {
 
-	public static void main(String[] args) throws FileNotFoundException, IOException {
+	public static void main(String[] args) throws  IOException {
 		try (
 			FileReader fr = new FileReader("fic.txt");
 			BufferedReader br = new BufferedReader(fr) 

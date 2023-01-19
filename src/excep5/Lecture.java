@@ -1,0 +1,21 @@
+package excep5;
+import java.io.*;
+
+public class Lecture {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		try (
+			FileReader fr = new FileReader("fic.txt");
+			BufferedReader br = new BufferedReader(fr) 
+		){
+			String ligne = null; 
+			do {
+				ligne = br.readLine();
+				System.out.println(ligne); 
+			} while(ligne != null);
+		}
+		catch (FileNotFoundException fnfe) { 
+			System.out.println(fnfe.getMessage());
+		}
+	}
+}

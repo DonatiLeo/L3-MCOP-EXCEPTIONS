@@ -10,7 +10,7 @@ public class TestCB {
 		
 		try {
 			monCompte.créditer(100);
-			monCompte.débiter(3000);
+			monCompte.débiter(2000);
 			monCompte.créditer(-5);
 			
 		}

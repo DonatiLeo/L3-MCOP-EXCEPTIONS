@@ -2,7 +2,7 @@ package excep4;
 
 public class TestCB {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		CompteBancaire monCompte = new CompteBancaire();
 		
 		monCompte.solde = 2500;
@@ -11,7 +11,7 @@ public class TestCB {
 		try {
 			monCompte.créditer(100);
 			monCompte.débiter(3000);
-			monCompte.créditer(-5);
+			monCompte.créditer(5);
 			
 		}
 		catch (IllegalArgumentException iae) {

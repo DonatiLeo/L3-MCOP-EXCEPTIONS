@@ -11,6 +11,8 @@ public class CompteBancaire {
 	}
 	
 	void débiter(int somme) {
+		if (somme < 0)
+			throw new IllegalArgumentException("somme négative");
 		if (somme > solde)
 			throw new DécouvertException(this);
 		solde -= somme;

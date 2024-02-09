@@ -10,7 +10,7 @@ public class TestCB {
 			monCompte.créditer(-5);
 		}
 		catch (IllegalArgumentException iae) {
-			System.out.println(iae.getMessage());
+			System.err.println(iae.getMessage());
 		}
 		System.out.println("solde = " + monCompte.solde);
 	}

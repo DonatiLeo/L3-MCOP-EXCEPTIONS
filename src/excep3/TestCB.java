@@ -15,10 +15,10 @@ public class TestCB {
 			
 		}
 		catch (IllegalArgumentException iae) {
-			System.out.println(iae.getMessage());
+			System.err.println(iae.getMessage());
 		}
 		catch (DécouvertException dec) {
-			System.out.println(dec.getMessage() + " car le solde est " + dec.compte.solde);
+			System.err.println(dec.getMessage() + " car le solde est " + dec.compte.solde);
 		}
 		
 		System.out.println("solde = " + monCompte.solde);

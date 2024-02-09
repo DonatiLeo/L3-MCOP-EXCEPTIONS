@@ -8,10 +8,10 @@ public class Lecture {
 			FileReader fr = new FileReader("fic.txt");
 			BufferedReader br = new BufferedReader(fr) 
 		){
-			String ligne = null; 
+			String ligne = br.readLine();
 			do {
-				ligne = br.readLine();
 				System.out.println(ligne); 
+				ligne = br.readLine();
 			} while(ligne != null);
 		}
 		catch (FileNotFoundException fnfe) { 

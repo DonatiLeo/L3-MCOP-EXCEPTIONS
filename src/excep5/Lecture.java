@@ -15,7 +15,8 @@ public class Lecture {
 			} while(ligne != null);
 		}
 		catch (FileNotFoundException fnfe) { 
-			System.out.println(fnfe.getMessage());
+			System.err.println(fnfe.getMessage());
 		}
+		System.out.println("ICI TOUT EST NORMAL"); 
 	}
 }

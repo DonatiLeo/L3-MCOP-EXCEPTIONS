@@ -1,6 +1,6 @@
 package excep3;
 
-public class DécouvertException extends RuntimeException {
+public class DécouvertException extends Exception {
 	CompteBancaire compte; 
 	
 	DécouvertException(CompteBancaire c) {

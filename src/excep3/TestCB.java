@@ -2,7 +2,7 @@ package excep3;
 
 public class TestCB {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws  DécouvertException {
 		CompteBancaire monCompte = new CompteBancaire();
 		
 		monCompte.solde = 2500;
@@ -11,7 +11,8 @@ public class TestCB {
 		try {
 			monCompte.créditer(100);
 			monCompte.débiter(2000);
-			monCompte.créditer(-5);
+			//monCompte.créditer(-5);
+			monCompte.débiter(800);
 			
 		}
 		catch (IllegalArgumentException iae) {
@@ -22,5 +23,7 @@ public class TestCB {
 		}
 		
 		System.out.println("solde = " + monCompte.solde);
+		monCompte.créditer(100);
+		monCompte.débiter(2000);
 	}
 }

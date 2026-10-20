@@ -10,7 +10,7 @@ public class CompteBancaire {
 		solde += somme;
 	}
 	
-	void débiter(int somme) {
+	void débiter(int somme) throws  DécouvertException {
 		if (somme < 0)
 			throw new IllegalArgumentException("somme négative");
 		if (somme > solde)

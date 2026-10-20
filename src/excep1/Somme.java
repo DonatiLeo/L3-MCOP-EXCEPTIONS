@@ -14,16 +14,17 @@ public class Somme {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		try {
-			int somme = 0;
-			
-			for(String arg : args)
+		int somme = 0;
+		for(String arg : args) {
+			try {
 				somme += Integer.parseInt(arg);
-			
-			System.out.println(somme);
-			
-		} catch (NumberFormatException nfe) {
-			System.out.println(nfe.getMessage() + " n'est pas un nombre !");
+	
+			} catch (NumberFormatException nfe) {
+				System.err.println(nfe.getMessage() + " n'est pas un nombre ! Donc ignoré dans la somme.");
+			}
 		}
+		
+		System.out.println("Le résultat de la somme est " + somme);
+		
 	}
 }
